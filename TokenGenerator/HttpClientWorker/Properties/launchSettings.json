@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "HttpClientWorker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
