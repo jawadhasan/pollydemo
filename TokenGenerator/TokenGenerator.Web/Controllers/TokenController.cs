@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,13 +16,14 @@ namespace TokenGenerator.Web.Controllers
         {
             _requestCount++;
 
-            //cause delay on first 5 requests, 6th request without delay
             if (_requestCount % 6 != 0)
             {
-                await Task.Delay(10000); //simulate work-10sec
+                await Task.Delay(10000); // simulate some data processing by delaying for 10 seconds
             }
 
             return Ok(15);
         }
     }
+
+
 }
